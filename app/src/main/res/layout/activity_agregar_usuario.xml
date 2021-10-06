@@ -18,28 +18,43 @@
         android:textSize="20dp" />
 
     <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:src="@drawable/add"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_gravity="center"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/add"
 
-            />
-
-
+        />
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="NOMBRE"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:textSize="16dp" />
 
     <EditText
         android:id="@+id/txt_nombrePersona"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:ems="20"
         android:hint="Nombre"
         android:inputType="text"
         android:paddingTop="15dp"></EditText>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="APELLIDOS"
+        android:textAlignment="textEnd"
+
+        android:textStyle="bold"
+        android:textSize="16dp" />
 
     <EditText
         android:id="@+id/txt_apellidPersona"
@@ -50,6 +65,15 @@
         android:inputType="text"
         android:paddingTop="15dp"></EditText>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="CORREO"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
     <EditText
         android:id="@+id/txt_emailPersona"
         android:layout_width="match_parent"
@@ -58,6 +82,55 @@
         android:hint="Correo"
         android:inputType="textEmailAddress"
         android:paddingTop="15dp"></EditText>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="NÚMERO DE CELULAR"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/txt_numero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Número de celular"
+        android:inputType="text|number"
+        android:paddingTop="15dp"></EditText>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="FECHA DE CUMPLEAÑOS"
+        android:textAlignment="textEnd"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/txtFechadeCumpleaños"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="false"
+        android:hint="Fecha de Cumpleaños"
+        android:inputType="date"
+        android:maxLines="1"
+        android:onClick="abrirCalendario" />
+
+
+    <Button
+        android:id="@+id/btnAñadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/plus"
+
+        android:text="  AÑADIR" />
 
 
 </LinearLayout>

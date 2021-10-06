@@ -6,6 +6,9 @@ public class Persona {
     private String Nombre;
     private String Apellidos;
     private String Correo;
+    private String Numero;
+    private String FechaNacimiento;
+
 
     public Persona() {
     }
@@ -40,6 +43,22 @@ public class Persona {
 
     public void setCorreo(String correo) {
         Correo = correo;
+    }
+
+    public String getNumero() {
+        return Numero;
+    }
+
+    public void setNumero(String numero) {
+        Numero = numero;
+    }
+
+    public String getFechaNacimiento() {
+        return FechaNacimiento;
+    }
+
+    public void setFechaNacimiento(String fechaNacimiento) {
+        FechaNacimiento = fechaNacimiento;
     }
 
     //ESTE METODO MUESTRE LO QUE QUIERES QUE SE MUESTRE EN LA LISTA:

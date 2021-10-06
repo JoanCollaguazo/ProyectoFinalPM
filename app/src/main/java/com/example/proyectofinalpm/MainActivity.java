@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     //BTN FLOTANTE DE AGREGAR::::::::::::::::::
     private FloatingActionButton btnAgregarFAB;
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity{
     //PARTE DE LA EDICION DE CONTACTOS:
     Persona personaSelected;
     EditText editTextNombre, editTextApellidos, editTextCorreo;
-    
 
 
     @Override
@@ -55,6 +54,10 @@ public class MainActivity extends AppCompatActivity{
 
         inicializarFirebase();
         listarDatos();
+
+        //PONER ICONO EN ACCION BAR:::::::::::::::::::
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
         listV_persona = findViewById(R.id.lv_DatosPersonas);
         btnAgregarFAB = (FloatingActionButton) findViewById(R.id.fabbtnAgregar);
@@ -79,13 +82,11 @@ public class MainActivity extends AppCompatActivity{
         });
 
 
-
-
         //ESTRUCTURA PARA PODERLE DAR FUNCION AL BOTON ADD
         btnAgregarFAB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),AgregarActivity.class);
+                Intent i = new Intent(getApplicationContext(), AgregarActivity.class);
                 startActivity(i);
             }
         });
@@ -105,7 +106,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 listPersona.clear();
-                for (DataSnapshot objSnaptshot:snapshot.getChildren()){
+                for (DataSnapshot objSnaptshot : snapshot.getChildren()) {
                     Persona p = objSnaptshot.getValue(Persona.class);
                     listPersona.add(p);
 
@@ -121,8 +122,9 @@ public class MainActivity extends AppCompatActivity{
         });
 
     }
+
     private void CambiodeActivity() {
-        Intent i = new Intent(getApplicationContext(),AgregarActivity.class);
+        Intent i = new Intent(getApplicationContext(), AgregarActivity.class);
         startActivity(i);
     }
 
