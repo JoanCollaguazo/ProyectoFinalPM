@@ -15,6 +15,7 @@
         android:focusable="auto"
         android:gravity="center"
         android:text="REGISTRO DE USUARIOS"
+        android:textStyle="bold"
         android:textSize="20dp" />
 
     <ImageView
@@ -23,7 +24,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/add"
+        android:src="@drawable/adduser"
 
         />
 
@@ -129,8 +130,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:drawableLeft="@drawable/plus"
-
-        android:text="  AÑADIR" />
+        android:layout_marginTop="20dp"
+        android:text="  AÑADIR"
+        android:textSize="20sp" />
 
 
 </LinearLayout>
