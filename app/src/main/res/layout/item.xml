@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+
+        android:id="@+id/adapterImageLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="2dp">
+
+        <ImageView
+
+            android:id="@+id/adapterImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <TextView
+
+        android:id="@+id/adapterName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/adapterNextIcon"
+        android:layout_toRightOf="@+id/adapterContactImageLayout"
+        android:paddingLeft="5dp"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <ImageView
+
+        android:id="@+id/adapterNextIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+
+</RelativeLayout>

@@ -28,7 +28,6 @@ import java.util.UUID;
 public class AgregarActivity extends AppCompatActivity {
 
     EditText editTextNombre, editTextApellidos, editTextCorreo, editTextNumero, editTextFechaNacimiento;
-    ListView listViewPersona;
     Button btnAñadir;
 
 
@@ -45,17 +44,16 @@ public class AgregarActivity extends AppCompatActivity {
         actionbar.hide();
 
         setContentView(R.layout.activity_agregar_usuario);
+
         editTextNombre = (EditText) findViewById(R.id.txt_nombrePersona);
         editTextApellidos = (EditText) findViewById(R.id.txt_apellidPersona);
         editTextCorreo = (EditText) findViewById(R.id.txt_emailPersona);
         editTextNumero = (EditText) findViewById(R.id.txt_numero);
-
         editTextFechaNacimiento = (EditText) findViewById(R.id.txtFechadeCumpleaños);
-//        etPlannedDate.setOnClickListener(this);
         btnAñadir = (Button) findViewById(R.id.btnAñadir);
 
 
-        listViewPersona = findViewById(R.id.lv_DatosPersonas);
+
 
         //ESTE METODO DEBE ESTAR SIEMPRE::::::::::::
         inicializarFirebase();

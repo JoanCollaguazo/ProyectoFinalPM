@@ -12,8 +12,8 @@ public class Splash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //OCULTAR ACTION BAR
-        ActionBar actionbar = getSupportActionBar();
-        actionbar.hide();
+       ActionBar actionbar = getSupportActionBar();
+       actionbar.hide();
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);

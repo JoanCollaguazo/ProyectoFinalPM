@@ -28,6 +28,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+
     //BTN FLOTANTE DE AGREGAR::::::::::::::::::
     private FloatingActionButton btnAgregarFAB;
     //LISTA DE TIPO DE PERSONA:
@@ -48,38 +49,24 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         inicializarFirebase();
         listarDatos();
 
+
         //PONER ICONO EN ACCION BAR:::::::::::::::::::
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
-        listV_persona = findViewById(R.id.lv_DatosPersonas);
+        listV_persona = findViewById(R.id.listv_DatosPersonas);
         btnAgregarFAB = (FloatingActionButton) findViewById(R.id.fabbtnAgregar);
 
         //EDICION DE PERSONA
         editTextNombre = (EditText) findViewById(R.id.txt_nombrePersona);
         editTextApellidos = (EditText) findViewById(R.id.txt_apellidPersona);
         editTextCorreo = (EditText) findViewById(R.id.txt_emailPersona);
-
-
-        //METODO PARA PODER EDITAR LOS DATOS DE LA LISTA:::
-        listV_persona.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //PROBLEMA CON EL CMABIO DE VENTANA PARA EDITAR
-                CambiodeActivity();
-                personaSelected = (Persona) parent.getItemAtPosition(position);
-                editTextNombre.setText(personaSelected.getNombre());
-                editTextApellidos.setText(personaSelected.getApellidos());
-                editTextCorreo.setText(personaSelected.getCorreo());
-            }
-        });
 
 
         //ESTRUCTURA PARA PODERLE DAR FUNCION AL BOTON ADD
@@ -123,9 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void CambiodeActivity() {
-        Intent i = new Intent(getApplicationContext(), AgregarActivity.class);
-        startActivity(i);
-    }
+
 
 }
