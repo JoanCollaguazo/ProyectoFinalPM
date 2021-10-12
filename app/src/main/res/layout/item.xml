@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toLeftOf="@+id/adapterNextIcon"
-        android:layout_toRightOf="@+id/adapterContactImageLayout"
         android:paddingLeft="5dp"
         android:textSize="16dp"
         android:textStyle="bold" />
@@ -36,10 +35,10 @@
         android:id="@+id/adapterNextIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="2dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+        android:padding="2dp"
+        android:src="@drawable/ic_baseline_keyboard_arrow_right_24" />
 
 
 </RelativeLayout>

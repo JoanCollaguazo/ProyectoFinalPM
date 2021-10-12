@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="23dp"
-    tools:context=".AgregarActivity">
+    tools:context=".EliminarActivity">
 
     <TextView
         android:layout_width="match_parent"
@@ -14,20 +14,27 @@
         android:layout_centerVertical="true"
         android:focusable="auto"
         android:gravity="center"
-        android:text="REGISTRO DE USUARIOS"
-        android:textStyle="bold"
-        android:textSize="20dp" />
+        android:text="ELIMINAR USUARIO"
+        android:textSize="20dp"
+        android:textStyle="bold" />
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:src="@drawable/adduser"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:focusable="auto"
+        android:gravity="center"
+        android:text="Selecciona a quien deseas Eliminar"
+        android:textSize="15dp"
+        android:textStyle="italic" />
 
-        />
-
+    <ListView
+        android:id="@+id/listv_DatosPersonas"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_weight="1"
+        android:divider="@color/ic_launcher_background"
+        android:dividerHeight="2dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -35,8 +42,8 @@
         android:layout_marginEnd="20dp"
         android:text="NOMBRE"
         android:textAlignment="textEnd"
-        android:textStyle="bold"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/txt_nombrePersona"
@@ -45,7 +52,8 @@
         android:ems="20"
         android:hint="Nombre"
         android:inputType="text"
-        android:paddingTop="15dp"></EditText>
+        android:paddingTop="15dp"
+        ></EditText>
 
     <TextView
         android:layout_width="match_parent"
@@ -54,8 +62,8 @@
         android:text="APELLIDOS"
         android:textAlignment="textEnd"
 
-        android:textStyle="bold"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/txt_apellidPersona"
@@ -72,8 +80,8 @@
         android:layout_marginEnd="20dp"
         android:text="CORREO"
         android:textAlignment="textEnd"
-        android:textStyle="bold"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/txt_emailPersona"
@@ -90,8 +98,8 @@
         android:layout_marginEnd="20dp"
         android:text="NÚMERO DE CELULAR"
         android:textAlignment="textEnd"
-        android:textStyle="bold"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/txt_numero"
@@ -109,8 +117,8 @@
         android:layout_marginEnd="20dp"
         android:text="FECHA DE CUMPLEAÑOS"
         android:textAlignment="textEnd"
-        android:textStyle="bold"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/txtFechadeCumpleaños"
@@ -120,22 +128,7 @@
         android:focusable="false"
         android:hint="Fecha de Cumpleaños"
         android:inputType="date"
-        android:maxLines="1"
-        android:onClick="abrirCalendario" />
-
-
-    <Button
-        android:id="@+id/btnAñadir"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:drawableLeft="@drawable/plus"
-        android:layout_marginTop="10dp"
-        android:text="  AÑADIR"
-        android:backgroundTint="@color/ic_launcher_background"
-        android:textSize="20sp"
-
-        />
+        android:maxLines="1" />
 
 
 </LinearLayout>

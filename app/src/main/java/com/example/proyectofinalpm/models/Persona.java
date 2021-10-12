@@ -8,7 +8,17 @@ public class Persona {
     private String Correo;
     private String Numero;
     private String FechaNacimiento;
+    private int img;
 
+    public Persona(String uid, String nombre, String apellidos, String correo, String numero, String fechaNacimiento, int img) {
+        this.uid = uid;
+        Nombre = nombre;
+        Apellidos = apellidos;
+        Correo = correo;
+        Numero = numero;
+        FechaNacimiento = fechaNacimiento;
+        this.img = img;
+    }
 
     public Persona() {
     }
@@ -59,6 +69,14 @@ public class Persona {
 
     public void setFechaNacimiento(String fechaNacimiento) {
         FechaNacimiento = fechaNacimiento;
+    }
+
+    public int getImg() {
+        return img;
+    }
+
+    public void setImg(int img) {
+        this.img = img;
     }
 
     //ESTE METODO MUESTRE LO QUE QUIERES QUE SE MUESTRE EN LA LISTA:

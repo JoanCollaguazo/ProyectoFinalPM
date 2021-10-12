@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -22,7 +23,9 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.UUID;
 
 public class AgregarActivity extends AppCompatActivity {
@@ -34,6 +37,8 @@ public class AgregarActivity extends AppCompatActivity {
     //VARIABLES PARA LA BASE DE DATOS:
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
