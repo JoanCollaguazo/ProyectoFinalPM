@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -35,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
     //CREACION DE ARRAYADAPTER DE TIPO PERSONA::::::::::::::::::::
     ArrayAdapter<Persona> arrayAdapterPersona;
 
+
+    ListView listV_persona;
+
     //VARIABLES PARA LA BASE DE DATOS:
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-    ListView listV_persona;
 
     //PARTE DE LA EDICION DE CONTACTOS:
     Persona personaSelected;
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         //FLOATING BUTTONS:
         grupoBotones = (FloatingActionsMenu) findViewById(R.id.grupoFab);
@@ -76,6 +80,25 @@ public class MainActivity extends AppCompatActivity {
         editTextNombre = (EditText) findViewById(R.id.txt_nombrePersona);
         editTextApellidos = (EditText) findViewById(R.id.txt_apellidPersona);
         editTextCorreo = (EditText) findViewById(R.id.txt_emailPersona);
+
+
+        listV_persona.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent i = new Intent(MainActivity.this, MostrarActivity.class);
+                personaSelected = (Persona) parent.getItemAtPosition(position);
+
+                /*
+                String itemSeleccionado = String.valueOf((listV_persona.getItemAtPosition(position)));
+
+
+                i.putExtra("nombre", itemSeleccionado);
+
+                startActivity(i);
+                */
+
+            }
+        });
 
 
         //ESTRUCTURA PARA PODERLE DAR FUNCION AL BOTON ADD

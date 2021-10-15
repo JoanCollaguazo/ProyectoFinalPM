@@ -82,6 +82,6 @@ public class Persona {
     //ESTE METODO MUESTRE LO QUE QUIERES QUE SE MUESTRE EN LA LISTA:
     @Override
     public String toString() {
-        return Nombre;
+        return Nombre+" "+Apellidos;
     }
 }
