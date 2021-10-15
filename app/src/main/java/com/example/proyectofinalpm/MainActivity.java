@@ -80,25 +80,7 @@ public class MainActivity extends AppCompatActivity {
         editTextNombre = (EditText) findViewById(R.id.txt_nombrePersona);
         editTextApellidos = (EditText) findViewById(R.id.txt_apellidPersona);
         editTextCorreo = (EditText) findViewById(R.id.txt_emailPersona);
-
-
-        listV_persona.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(MainActivity.this, MostrarActivity.class);
-                personaSelected = (Persona) parent.getItemAtPosition(position);
-
-                /*
-                String itemSeleccionado = String.valueOf((listV_persona.getItemAtPosition(position)));
-
-
-                i.putExtra("nombre", itemSeleccionado);
-
-                startActivity(i);
-                */
-
-            }
-        });
+        
 
 
         //ESTRUCTURA PARA PODERLE DAR FUNCION AL BOTON ADD

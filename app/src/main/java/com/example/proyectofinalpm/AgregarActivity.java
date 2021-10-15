@@ -90,7 +90,7 @@ public class AgregarActivity extends AppCompatActivity {
                     p.setFechaNacimiento(fechaNacimiento);
                     //AÑADE AL FIREBASE DATOS:::
                     databaseReference.child("Persona").child(p.getUid()).setValue(p);
-                    //Toast.makeText(this, "Friend! agregado con exito", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Friend! agregado con exito", Toast.LENGTH_SHORT).show();
                     limpiarCajas();
                     CambiodeActivity();
                 }

@@ -98,7 +98,7 @@ public class EditarActivity extends AppCompatActivity {
                 p.setFechaNacimiento(editTextFechaNacimiento.getText().toString().trim());
                 //CODIGO FIREBASE:::::::::::::::::::::::::::::::::::::::::::::::
                 databaseReference.child("Persona").child(p.getUid()).setValue(p);
-                Toast.makeText(getApplicationContext(), "Usuario Actualizado", Toast.LENGTH_SHORT);
+                Toast.makeText(getApplicationContext(), "Usuario Actualizado", Toast.LENGTH_SHORT).show();
                 limpiarCajas();
                 CambiodeActivity();
 
